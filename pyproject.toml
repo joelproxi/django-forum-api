@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "core"
+version = "0.1.0"
+description = "build a forum backend"
+authors = ["proxidev <joeledmond95@gmail.com>"]
+license = "ltd"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django-filter = "^22.1"
+
+[tool.poetry.group.dev.dependencies]
+Django = "^4.1.4"
+django-debug-toolbar-django13 = "^0.8.4"
+djangorestframework = "^3.14.0"
+django-cors-headers = "^3.13.0"
+pytest = "^7.2.0"
+django-taggit = "^3.1.0"
+djangorestframework-simplejwt = "^5.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

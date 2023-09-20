@@ -1,0 +1,21 @@
+version: 2.1
+
+jobs:
+  build_and_test:
+    executor: python/default
+    steps:
+      - checkout
+      - python/install-packages:
+          pkg-manager: 
+            pip
+      - run:
+          name: "Run test"
+          command: python -m pytest
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - .
+
+
+  
+# VS Code Extension Version: 1.5.0
